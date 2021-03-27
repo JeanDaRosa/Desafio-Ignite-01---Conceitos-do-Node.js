@@ -24,7 +24,7 @@ function checksExistsUserAccount(request, response, next) {
 }
 
 app.post('/users', (request, response) => {
-  const { name , username } = request.body;
+  const { name, username } = request.body;
 
   const userExist = users.find((user) => user.username === username);
 
@@ -118,4 +118,3 @@ app.delete('/todos/:id', checksExistsUserAccount, (request, response) => {
 module.exports = app;
 
 
-//app.listen(3000);
